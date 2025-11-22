@@ -87,7 +87,7 @@ export default function Home() {
   const solveMap = useCallback(async (algorithm: string) => {
     setIsSolving(true);
     try {
-      const response = await fetch(`http://localhost:8001/solve/${algorithm}`, {
+      const response = await fetch(`/api/solve/${algorithm}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
